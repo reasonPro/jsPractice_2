@@ -1,0 +1,525 @@
+@import 'font.css';
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* стилізація бокса блокування */
+#blockBox{
+	position: absolute;
+    width: 175px;
+    height: 160px;
+    left: 50%;
+    top: 50%;
+    margin-top: -80px;
+    margin-left: -87px;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    box-shadow: 3px 6px 20px black;
+    z-index: 999;
+    transform: scale(1);
+    transition: 1s;
+    display: flex;
+    align-items: center;
+}
+
+/* оверфлов для блокування */
+#blockOwerflow{
+	width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-image: url(../images/8.jpg);
+    z-index: 998;
+    transition: 1s;
+}
+
+/* стилі для вводу логіна і пароля */
+#login, #password{
+    width: 140px;
+    height: 20px;
+    outline: none;
+    border: 2px solid lightgrey;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px; 0px;
+    transition: 0.5s;
+}
+
+/* вспливаюче вікно якщо не введений логін або пароль */
+#writeLogin{
+    display: block;
+    color: red;
+    font-size: 32px;
+}
+
+/* вспливаюче вікно якщо не правильно введені логін або пароль */
+#writePass{
+	font-size: 29px;
+    color: red;
+}
+
+#mainBox{
+	transition: 1s;
+}
+
+/* стилі для панелей налаштувань  */
+#nav, #editNav{
+	position: fixed;
+    width: 100%;
+    height: 100px;
+    margin: 0;
+    top: 0;
+    left: 0;
+    border-bottom: 1px dotted red;
+    background: radial-gradient(ellipse, #fffcdc, #d9a7c7);
+	
+}
+
+/* бокс з основним текстом */
+main{
+	padding: 20px;
+	text-align: left;
+	margin: 100px 0 0 0;
+}
+
+/* стилі форм панелей налаштувань */
+#headForm, #editForm{
+	width: 100%;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* стилі для кнопок */
+#logIn, #edit, #b, #i, #u, #color, #background, #save, #addTable, #addList, #block{
+	display: block;
+	width: 90px;
+	height: 25px;
+	margin: 0 2px;
+	background-color: #ffa000;
+	border: 2px solid #ffa000;
+	font-size: 13px;
+	border-radius: 10px;
+	box-shadow: 2px 2px grey;
+	outline: none;
+	transition: 0.5s;
+}
+
+#logIn{
+	width: 70px;
+    height: 20px;
+    margin-top: 10px;
+}
+
+
+#logIn:hover, #block:hover, #edit:hover, #b:hover, #i:hover, #u:hover, #color:hover, #background:hover, #save:hover, #addTable:hover, #addList:hover{
+	background-color: #faf6ca;
+	border: 2px outset #faf6ca;
+	cursor: pointer;
+}
+
+#edit, #b, #block{
+	font-weight: bold;
+}
+
+#i{
+	font-style: italic;
+}
+
+#u{
+	text-decoration: underline;
+}
+
+#logIn:active, #block:active, #edit:active, #b:active, #i:active, #u:active, #color:active, #background:active, #save:active, #addTable:active, #addList:active{
+	border: 2px inset #faf6ca;
+}
+
+/* стилі для селектів розміру тексту і шрифта */
+.selectSize{
+	width: 70px;
+	height: 25px;
+	margin: 0 3px;
+	overflow: hidden;
+	background: #0098ac url(../1234.png) no-repeat 50px;
+	border-radius: 10px;
+	box-shadow: 2px 2px grey;
+	transition: 0.5s;
+}
+.selectFamily{
+	width: 130px;
+	height: 25px;
+	margin: 0 3px;
+	overflow: hidden;
+	background: #0098ac url(../1234.png) no-repeat 115px;
+	border-radius: 10px;
+	box-shadow: 2px 2px grey;
+	transition: 0.5s;
+}
+
+.selectSize:hover, .selectFamily:hover{
+	background-color: #00e2ff;
+}
+
+
+#fontSize{
+	width: 80px;
+	height: 25px;
+	outline: none;
+	background: #ffa00000;
+	border: 0;
+	font-size: 12px;
+	margin-top: 1px;
+
+}
+#fontFamily{
+	width: 140px;
+	height: 25px;
+	outline: none;
+	background: #ffa00000;
+	border: 0;
+	font-size: 12px;
+	margin-top: 1px;
+}
+
+#fontFamily:hover, #fontSize:hover{
+	cursor: pointer;
+}
+
+/* вирівнювання тексту */
+#rigth, #left, #center{
+	display: block;
+	margin: 0 3px;
+	height: 25px;
+}
+
+/* модальне вікно для вибору кольору тексту */
+#colorModal{
+	position: absolute;
+	width: 310px;
+	height: 310px;
+	background-color: white;
+	border: 1px solid lightgrey;
+	border-radius: 10px;
+	box-shadow: 2px 3px 2px grey;
+	padding: 10px;
+	display: flex;
+	flex-flow: row wrap;
+	margin-top: -50%;
+	margin-left: 50%;
+	transform: scale(0.01);
+	z-index: 999;
+	transition: 1s;
+}
+
+/* кнопки вибору кольору */
+.box{
+	width: 96px;
+	height: 96px;
+	box-sizing: border-box;
+	border: 1px solid white;
+	cursor: pointer;
+	border-radius: 15px;
+}
+
+/* оверфлов для модалки вибору кольору */
+.overflow{
+	width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: rgba(0,0,0,0.2);
+}
+.box:hover{
+	border: 2px inset #faf6ca;
+}
+
+.box:active{
+	border: 2px outset #faf6ca;
+}
+
+/* кнопка зміни модалки для вибору картинки фону */
+#backColorModal{
+	position: absolute;
+	width: 323px;
+	height: 390px;
+	background-color: white;
+	border: 1px solid lightgrey;
+	border-radius: 10px;
+	box-shadow: 1px 2px 10px grey;
+	padding: 10px;
+	margin-top: -50%;
+	margin-left: 50%;
+	z-index: 999;
+	transform: scale(0.01);
+	transition: 1s;
+}
+
+.boxForColor{
+	width: 302px;
+    height: 303px;
+    display: flex;
+    flex-flow: row wrap;
+    border: 1px solid white;
+    margin: 20px auto;
+}
+.boxBack{
+	width: 100px;
+    height: 100px;
+    border: 1px solid white;
+    border-radius: 15px;
+}
+
+.boxBack:hover{
+	border: 2px inset #faf6ca;
+}
+
+.boxBack:active{
+	border: 2px outset #faf6ca;
+}
+
+/* кнопка для переходу зміни модального вікна на вибір кольору фону */
+#backColorButt{
+	display: block;
+	width: 136px;
+	height: 40px;
+	margin: 0 2px;
+	background-color: #ffa000;
+	border: 2px solid #ffa000;
+	font-size: 13px;
+	border-radius: 10px;
+	box-shadow: 2px 2px grey;
+	outline: none;
+	transition: 0.5s;
+}
+
+#backColorButt:hover{
+	background-color: #faf6ca;
+	border: 2px outset #faf6ca;
+	cursor: pointer;
+}
+
+#backColorButt:active{
+	border: 2px inset #faf6ca;
+}
+
+.overflowBack{
+	width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: rgba(0,0,0,0.2);
+}
+
+
+/* модалка для вибору картинки фону */
+#imageModal{
+	position: absolute;
+    width: 450px;
+    height: 440px;
+    background-color: white;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    box-shadow: 1px 2px 10px grey;
+    padding: 10px;
+    margin-top: -50%;
+    margin-left: 50%;
+    z-index: 999;
+    transform: scale(0.01); 
+    transition: 1s;
+}
+
+.boxForImage{
+	width: 411px;
+    height: 321px;
+    display: flex;
+    flex-flow: row wrap;
+    border: 1px solid white;
+    margin: 20px auto;
+}
+
+.boxImage{
+	    width: 136px;
+    height: 107px;
+    border: 1px solid white;
+    border-radius: 15px;
+}
+
+.boxImage:hover{
+	border: 2px inset #faf6ca;
+}
+
+.boxImage:active{
+	border: 2px outset #faf6ca;
+}
+
+/* кнопка для переходу в модалку для вибору картинки фону */
+#backImageButt{
+	display: block;
+	width: 136px;
+	height: 40px;
+	margin: 0 2px;
+	background-color: #ffa000;
+	border: 2px solid #ffa000;
+	font-size: 13px;
+	border-radius: 10px;
+	box-shadow: 2px 2px grey;
+	outline: none;
+	transition: 0.5s;
+}
+
+#backImageButt:hover{
+	background-color: #faf6ca;
+	border: 2px outset #faf6ca;
+	cursor: pointer;
+}
+
+#backImageButt:active{
+	border: 2px inset #faf6ca;
+}
+
+.overflowImage{
+	width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: rgba(0,0,0,0.2);
+}
+
+/* відключений блок для додавання таблиць і списків */
+#editBox{
+	display: none;
+	transition: 0.5s;
+}
+
+/* головна панель блока для створення  таблиць і списків */
+#editNav{
+	width: 100%;
+    height: 100px;
+    margin: 0;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid red;
+    background: radial-gradient(ellipse, #fffcdc, #d9a7c7);
+}
+
+#textArea{
+	margin: 100px 0;
+	padding: 10px 50px;
+}
+
+/* модалка для створення таблиці */
+#tableBox{
+	position: absolute;
+    width: 350px;
+    height: 160px;
+    left: -50%;
+    top: 50%;
+    margin-top: -80px;
+    margin-left: -175px;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    box-shadow: 3px 6px 20px black;
+    z-index: 999;
+    transform: scale(0.01);
+    transition: 1s;
+}
+
+/* інпути для введення даних для таблиці */
+#rowElementsTable, #colElementsTable, #widthTable, #heightTable, #cellspacing, #weightTable, #colorLine, #manyItems{
+    width: 50px;
+    outline: none;
+}
+
+/* кнопки скинути і створити таблицю */
+#formTable{
+	width: 100%;
+	height: 50px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.overflowTable{
+	width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 998;
+}
+
+/* блок який має вискакувати якщо дані для таблиці введені не вірно */
+#warning{
+	color: red;
+    font-size: 14px;
+    display: none;
+}
+
+#ulBox{
+	position: absolute;
+    width: 175px;
+    height: 160px;
+    left: -50%;
+    top: 50%;
+    margin-top: -80px;
+    margin-left: -87px;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    box-shadow: 3px 6px 20px black;
+    z-index: 999;
+    transform: scale(0.01);
+    transition: 1s;
+    line-height: 1.8;
+}
+
+#ulSelect{
+	display: none;
+}
+
+#olSelect{
+	display: block;
+}
+
+/* модалка для блокування роботи додатку */
+#logpas{
+	position: absolute;
+    width: 300px;
+    height: 90px;
+    left: -50%;
+    top: 50%;
+    margin-top: -200px;
+    margin-left: -150px;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    box-shadow: 3px 6px 20px black;
+    z-index: 9999;
+    transform: scale(0.01);
+    transition: 1s;
+    line-height: 1;
+}
+
+.overflowLogpas{
+	width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: #ff000080;
+    z-index: 9998;
+}
+
+
+
+
+

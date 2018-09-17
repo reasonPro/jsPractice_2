@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Project_js2</title>
+    <link rel="stylesheet" href="style/main.css"> 
+</head>
+
+<body>
+    
+   <div id="mainBox">
+      <nav id="nav">
+      <form id="headForm">
+         
+
+         <input type="button" value="Block" id="block">
+         <input type="button" value="Edit" id="edit">
+         <input type="button" value="B" id="b">
+         <input type="button" value="I" id="i">
+         <input type="button" value="U" id="u">
+
+         <div class="selectSize">
+            <select name="sizeSelect" id="fontSize">
+               <option value="7px">7px</option>
+               <option value="8px">8px</option>
+               <option value="9px">9px</option>
+               <option value="10px">10px</option>
+               <option value="11px">11px</option>
+               <option value="12px">12px</option>
+               <option value="14px">14px</option>
+               <option value="16px" selected>16px</option>
+               <option value="18px">18px</option>
+               <option value="20px">20px</option>
+               <option value="30px">30px</option>
+               <option value="40px">40px</option>
+            </select>
+         </div>
+
+         <div class="selectFamily">
+            <select id="fontFamily">
+               <option value="Georgia" selected>Georgia</option>
+               <option value="Times New Roman">Times New Roman</option>
+               <option value="Arial">Arial</option>
+               <option value="Helvetica">Helvetica</option>
+               <option value="Comic Sans MS">Comic Sans MS</option>
+               <option value="Tahoma">Tahoma</option>
+               <option value="Verdana">Verdana</option>
+               <option value="Geneva">Geneva</option>
+               <option value="Trebuchet MS">Trebuchet MS</option>
+               <option value="Impact">Impact</option>
+               <option value="Charcoal">Charcoal</option>
+               <option value="Gadget">Gadget</option>
+            </select>
+         </div>
+
+         
+        <input type="button" value="Color" id="color">
+         <input type="button" value="Background" id="background">
+      <form id="radioForm">
+         <input type="radio" name="level" checked id="left"> left
+         <input type="radio" name="level" id="center"> center
+         <input type="radio" name="level" id="right"> right    
+      </form>
+
+      </form>
+   </nav>
+
+   <div id="colorModal">
+      <div class="box" style="color: red; background: red"></div>
+      <div class="box" style="color: green; background: green"></div>
+      <div class="box" style="color: yellow; background: yellow"></div>
+      <div class="box" style="color: gray; background: gray"></div>
+      <div class="box" style="color: blue; background: blue"></div>
+      <div class="box" style="color: pink; background: pink"></div>
+      <div class="box" style="color: violet; background: violet"></div>
+      <div class="box" style="color: lightgrey; background: lightgray"></div>
+      <div class="box" style="color: lightblue; background: lightblue"></div>
+   </div>
+
+   <div id="backColorModal">
+      <input type="button" value="Background Image" id="backImageButt">
+
+      <div class="boxForColor">
+         <div class="boxBack" style="color: red; background: red"></div>
+         <div class="boxBack" style="color: green; background: green"></div>
+         <div class="boxBack" style="color: yellow; background: yellow"></div>
+         <div class="boxBack" style="color: gray; background: gray"></div>
+         <div class="boxBack" style="color: blue; background: blue"></div>
+         <div class="boxBack" style="color: pink; background: pink"></div>
+         <div class="boxBack" style="color: violet; background: violet"></div>
+         <div class="boxBack" style="color: lightgrey; background: lightgray"></div>
+         <div class="boxBack" style="color: lightblue; background: lightblue"></div>
+      </div>
+      
+   </div>
+
+   <div id="imageModal">
+      <input type="button" value="Background Color" id="backColorButt">
+
+      <div class="boxForImage">
+         <div class="boxImage" style="; background: url(images/1.jpg); background-size: cover;"></div>
+         <div class="boxImage" style="; background: url(images/2.jpg); background-size: cover;"></div>
+         <div class="boxImage" style="; background: url(images/3.jpg); background-size: cover;"></div>
+         <div class="boxImage" style="; background: url(images/4.jpg); background-size: cover;"></div>
+         <div class="boxImage" style="; background: url(images/5.jpg); background-size: cover;"></div>
+         <div class="boxImage" style="; background: url(images/6.jpg); background-size: cover;"></div>
+         <div class="boxImage" style="; background: url(images/7.jpg); background-size: cover;"></div>
+         <div class="boxImage" style="; background: url(images/8.jpg); background-size: cover;"></div>
+         <div class="boxImage" style="; background: url(images/9.jpg); background-size: cover;"></div>
+      </div>
+      Завантажити картинку: <input type="file" id="file">
+   </div>
+
+   <main id="main">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <p>Maiores totam temporibus voluptates alias eligendi ipsum voluptate libero</p>
+      <p>saepe vero animi itaque nam quaerat quo repellendus, deserunt deleniti quae,</p>
+      <p>Lorem ipsum dolor sit amet, voluptates alias eligendi ipsum</p>
+      <p>consectetur adipisicing elit. nam quaerat quo repellendus, </p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <p>Maiores totam temporibus voluptates alias eligendi ipsum voluptate libero</p>
+      <p>saepe vero animi itaque nam quaerat quo repellendus, deserunt deleniti quae,</p>
+      <p>Lorem ipsum dolor sit amet, voluptates alias eligendi ipsum</p>
+      <p>consectetur adipisicing elit. nam quaerat quo repellendus, </p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <p>Maiores totam temporibus voluptates alias eligendi ipsum voluptate libero</p>
+      <p>saepe vero animi itaque nam quaerat quo repellendus, deserunt deleniti quae,</p>
+      <p>Lorem ipsum dolor sit amet, voluptates alias eligendi ipsum</p>
+      <p>consectetur adipisicing elit. nam quaerat quo repellendus, </p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <p>Maiores totam temporibus voluptates alias eligendi ipsum voluptate libero</p>
+      <p>saepe vero animi itaque nam quaerat quo repellendus, deserunt deleniti quae,</p>
+      <p>Lorem ipsum dolor sit amet, voluptates alias eligendi ipsum</p>
+      <p>consectetur adipisicing elit. nam quaerat quo repellendus, </p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <p>Maiores totam temporibus voluptates alias eligendi ipsum voluptate libero</p>
+      <p>saepe vero animi itaque nam quaerat quo repellendus, deserunt deleniti quae,</p>
+      <p>Lorem ipsum dolor sit amet, voluptates alias eligendi ipsum</p>
+      <p>consectetur adipisicing elit. nam quaerat quo repellendus, </p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <p>Maiores totam temporibus voluptates alias eligendi ipsum voluptate libero</p>
+      <p>saepe vero animi itaque nam quaerat quo repellendus, deserunt deleniti quae,</p>
+      <p>Lorem ipsum dolor sit amet, voluptates alias eligendi ipsum</p>
+      <p>consectetur adipisicing elit. nam quaerat quo repellendus, </p>
+
+         
+   </main>
+   </div>
+   <div id="editBox">
+      <div id="editNav">
+         <form id="editForm">
+            <input type="button" value="Save" id="save">
+            <input type="button" value="Create Table" id="addTable">
+            <input type="button" value="Create List" id="addList">
+         </form>
+      </div>
+      <textarea name="" id="textArea" cols="220" rows="55"></textarea>
+      <div id="tableBox">
+
+         <table>
+            <tr>
+               <td>К-сть рядків:</td>
+               <td><input type="text" id="rowElementsTable" required="qwerty"></td>
+               <td>К-сть стовбців:</td>
+               <td><input type="text" id="colElementsTable">
+            <tr>
+               <td>Ширина:</td>
+               <td><input type="text" id="widthTable"></td>
+               <td>Висота:</td>
+               <td><input type="text" id="heightTable"></td>
+            </tr>
+            <tr>
+               <td>cellspacing:</td>
+               <td><input type="text" id="cellspacing"></td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <td>Товщина рамки:</td>
+               <td><input type="text" id="weightTable"></td>
+               <td>Колір рамки:</td>
+               <td><input type="text" id="colorLine"></td>
+            </tr>
+         </table>
+
+      
+         <p id="warning">Дані введено не коректно або не всі поля заповнені</p>
+
+         <form id="formTable">
+            <input type="button" value="Скинути" id="deleteValue">
+            <input type="button" value="Створити" id="createTable">
+         </form>
+      </div>
+
+      <div id="ulBox">
+         Тип списку: <input type="radio" id="radioOl" name="radioUl" checked> ol <input type="radio" id="radioUl" name="radioUl"> ul
+         Тип маркера: 
+         <select name="typeMarkers" id="olSelect">
+            <option value="A" checked>A</option>
+            <option value="a">a</option>
+            <option value="I">I</option>
+            <option value="i">i</option>
+            <option value="1">1</option>
+         </select>
+         <select name="typeMarkers" id="ulSelect">
+            <option value="disc" checked>disc</option>
+            <option value="circle">circle</option>
+            <option value="square">square</option>
+         </select>
+         К-сть айтемів <input type="text" id="manyItems">
+
+         <form id="formUl">
+            <input type="button" value="Скинути" id="deleteValueUl">
+            <input type="button" value="Створити" id="createUl">
+         </form>
+      </div>
+   </div>
+   <div id="blockOwerflow"></div>
+
+   <div id="blockBox">
+
+
+
+      <form name="boxBlock">
+         <input type="text" placeholder="login" id="login">
+         <input type="password" placeholder="password" id="password">
+         <input type="button" value="Вхід" id="logIn">
+      </form>
+      
+   </div>
+
+
+   <div id="logpas">
+      <p id="writeLogin">Введи логін і пароль</p>
+      <p id="writePass">Ти ввів не правильний логін або пароль</p>
+   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+    <script src="JavaScript/script.js"></script>
+</body>
+
+</html>
